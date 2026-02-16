@@ -1,0 +1,21 @@
+/* 내부 링크 색상 수정 — accent color가 밝은색일 때 링크가 안 보이는 문제 */
+
+/* 리딩뷰 */
+.markdown-preview-view a.internal-link,
+.markdown-rendered a.internal-link {
+  color: var(--text-normal) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--text-faint) !important;
+}
+
+.markdown-preview-view a.internal-link:hover,
+.markdown-rendered a.internal-link:hover {
+  color: var(--text-muted) !important;
+  text-decoration-color: var(--text-normal) !important;
+}
+
+/* 라이브 프리뷰 (에디팅뷰) */
+.cm-s-obsidian span.cm-hmd-internal-link .cm-underline,
+.cm-s-obsidian .cm-link .cm-underline {
+  color: var(--text-normal) !important;
+}
